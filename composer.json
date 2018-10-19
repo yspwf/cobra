@@ -1,0 +1,16 @@
+{
+    "name": "learn/redis",
+    "description": "redis learn",
+    "authors": [
+        {
+            "name": "yspwf",
+            "email": "846163966@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\":"src/"
+        }
+    },
+    "require": {}
+}
