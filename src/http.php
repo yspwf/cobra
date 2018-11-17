@@ -23,7 +23,7 @@ class http{
     public function onRequest($request, $response){
         //var_dump($request);
 
-        echo $request->server->query_string;
+        var_dump($request->server);
 
         //$app = $this->app;
         //$get = json_encode($request->get);
