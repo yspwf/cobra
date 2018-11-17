@@ -1,6 +1,6 @@
 <?php 
  define('ROOT',__DIR__);
- require '/vender/autoload.php';
+ require ROOT.'/vender/autoload.php';
 // $params = require "/config/config.php";
 
 // $router = new app\router();
