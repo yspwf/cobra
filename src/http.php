@@ -21,8 +21,12 @@ class http{
     }
 
     public function onRequest($request, $response){
-        $response->header('Content-Type','text/plain');
-        $response->end('hello swoole');
+        $app = $this->app;
+        $get = json_encode($request->get);
+
+        $response->end("app is ".$app.", get is ". $get);
+        //$response->header('Content-Type','text/plain');
+        //$response->end('hello swoole');
     }
 
 }
