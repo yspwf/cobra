@@ -21,10 +21,12 @@ class http{
     }
 
     public function onRequest($request, $response){
-        var_dump($request);
-        //$app = $this->app;
-       // $get = json_encode($request->get);
+        //var_dump($request);
 
+        echo $request->server->query_string;
+
+        //$app = $this->app;
+        //$get = json_encode($request->get);
         //$response->end("app is ".$app.", get is ". $get);
         //$response->header('Content-Type','text/plain');
         //$response->end('hello swoole');
