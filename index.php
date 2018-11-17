@@ -1,9 +1,13 @@
 <?php 
-define('ROOT',__DIR__);
-require '/vender/autoload.php';
-$params = require "/config/config.php";
+ define('ROOT',__DIR__);
+// require '/vender/autoload.php';
+// $params = require "/config/config.php";
 
-$router = new app\router();
+// $router = new app\router();
+
+require ROOT."/src/http.php";
+$http = new http(9502);
+
 
 
 

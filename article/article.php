@@ -44,7 +44,11 @@ class article{
         // }  
 
         //$redis->publish('chat',"546456456");
-        echo "index";
+        //echo "index";
+
+
+        echo $redis->hset("product:213","collection","456");
+
     }
 
     // 回调函数,这里写处理逻辑
