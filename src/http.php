@@ -40,7 +40,7 @@ class http{
         //$class = "\\{$module}\\{$controller}";
         $class = "\articel\articel";
         $obj = new $class();
-        //$obj->$action();
+        $obj->$action();
 
         //$app = $this->app;
         //$get = json_encode($request->get);

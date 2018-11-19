@@ -5,7 +5,9 @@ use app\redis;
 class article{
 
     public function index(){
-        $redis = new redis();
+
+        echo "hello  article";
+        //$redis = new redis();
 
         //$redis->saddKey('hh',array('aa','bb','cc','dd'));
         //$redis->sremValues('hh', array('aa','bb'));
@@ -47,7 +49,7 @@ class article{
         //echo "index";
 
 
-        echo $redis->hset("product:213","collection","456");
+        //echo $redis->hset("product:213","collection","456");
 
     }
 
