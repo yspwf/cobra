@@ -10,7 +10,7 @@ $server->on('WorkerStart', function($server, $worker_id){
    
     // 注册自动加载函数
     //spl_autoload_register('autoLoader');
-
+    echo __DIR__.DIRECTORY_SEPARATOR.'router.php';
     require __DIR__.DIRECTORY_SEPARATOR.'router.php';
 
 });
