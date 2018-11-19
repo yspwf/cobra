@@ -9,15 +9,15 @@ $server->on('start', function($server){
 });
 
 $server->on('WorkerStart', function($server, $worker_id){
-    $app = 1;
+   
     // 注册自动加载函数
     spl_autoload_register('autoLoader');
 });
 
 
 $server->on('request', function(swoole_http_request $request, swoole_http_response $response){
-    echo $app."\r\n";
-    
+  
+
     $path_info = explode('/', $request->server['path_info']);
     if( empty($path_info) )
     {
