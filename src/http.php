@@ -34,13 +34,19 @@ class http{
         $module = $urlArr['0'];
         $controller = $urlArr['1'];
         $action = $urlArr['2'];
+
+        require '../article/article.php';
+
+        $article = new article();
+        $article->index();
+
         //echo $module."--".$controller."--".$action;
-        $router = new router();
-        $router::loader();
+        //$router = new router();
+       // $router::loader();
         //$class = "\\{$module}\\{$controller}";
-        $class = "\articel\articel";
-        $obj = new $class();
-        $obj->$action();
+        //$class = "\articel\articel";
+        //$obj = new $class();
+        //$obj->$action();
 
         //$app = $this->app;
         //$get = json_encode($request->get);

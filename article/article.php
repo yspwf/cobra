@@ -1,6 +1,5 @@
 <?php 
 namespace article;
-use app\redis;
 
 class article{
 
