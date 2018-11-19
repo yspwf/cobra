@@ -30,11 +30,17 @@ class http{
 
         //var_dump($request->server['request_uri']);
         $urlArr = explode('/',$request->server['path_info']);
-        var_dump($urlArr);
+        //var_dump($urlArr);
         // array_shift($urlArr);
-        // $module = $urlArr['0'];
-        // $controller = $urlArr['1'];
-        // $action = $urlArr['2'];
+        $module = $urlArr['1'];
+        $controller = $urlArr['2'];
+        $action = $urlArr['3'];
+
+        try{
+            echo $module."----".$controller."-----".$action;
+        }catch(Exception $e){
+            var_dump($e);
+        }
 
         // require '../article/article.php';
 
