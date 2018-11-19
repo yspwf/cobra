@@ -20,7 +20,7 @@ class http{
 
     public function onWorkerStart(){
         //$this->app = 1;
-        require ROOT."/src/router.php";
+        //require ROOT."/src/router.php";
         //$this->router = new router();
     }
 
