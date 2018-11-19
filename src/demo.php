@@ -1,11 +1,23 @@
 <?php 
+
+$app = '';
+
 $server = new swoole_http_server('0.0.0.0', 9501);
 
 $server->on('start', function($server){
     echo "this request is start\r\n";
 });
 
+$server->on('WorkerStart', function($server, $worker_id){
+    $app = 1;
+    // 注册自动加载函数
+    spl_autoload_register('autoLoader');
+});
+
+
 $server->on('request', function(swoole_http_request $request, swoole_http_response $response){
+    echo $app."\r\n";
+    
     $path_info = explode('/', $request->server['path_info']);
     if( empty($path_info) )
     {
@@ -61,8 +73,7 @@ function autoLoader($class)
         return;
     }
 }
-// 注册自动加载函数
-spl_autoload_register('autoLoader');
+
 $server->start();
 
 ?>
