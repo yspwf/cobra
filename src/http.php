@@ -28,9 +28,9 @@ class http{
         //var_dump($request->server['request_uri']);
         $urlArr = explode('/',$request->server['request_uri']);
         array_shift($urlArr);
-        $module = urlArr['0'];
-        $controller = urlArr['1'];
-        $action = urlArr['2'];
+        $module = $urlArr['0'];
+        $controller = $urlArr['1'];
+        $action = $urlArr['2'];
         echo $module."--".$controller."--".$action;
 
         //$app = $this->app;
