@@ -37,9 +37,9 @@ class http{
         $action = $urlArr['3'];
 
         try{
-           // echo $module."----".$controller."-----".$action;
-            $className = "\\{$module}\\{$controller}";
-            $obj = new $className();
+           echo $module."----".$controller."-----".$action;
+            // $className = "\\{$module}\\{$controller}";
+            // $obj = new $className();
         }catch(Exception $e){
             var_dump($e);
         }
