@@ -25,7 +25,7 @@ class router{
             //$filename = str_replace("\\","/",$filename);
             echo $filename."\r\n";
             if(!file_exists($filename)){
-                header("HTTP/1.1 404 Not Found");
+                //header("HTTP/1.1 404 Not Found");
                 echo "404";
                 exit();
             }
