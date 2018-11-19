@@ -38,8 +38,8 @@ class http{
 
         try{
            // echo $module."----".$controller."-----".$action;
-            $className = "\\{$mode}\\{$controller}";
-            echo $className;
+            $className = "\\{$module}\\{$controller}";
+            $obj = new $className();
         }catch(Exception $e){
             var_dump($e);
         }

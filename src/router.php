@@ -33,6 +33,7 @@ class router{
             $filename = ROOT."/".$classname.".php";
              // 构建文件名, 将namespace中的 '\' 替换为文件系统的分隔符 '/'
             $baseClasspath = \str_replace('\\', DIRECTORY_SEPARATOR, $filename);
+            echo $baseClasspath."\r\n";
             // 如果文件存在, 引用文件
             $classpath = __DIR__ . DIRECTORY_SEPARATOR . $baseClasspath;
             if (\is_file($classpath)) {
