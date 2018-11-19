@@ -21,12 +21,17 @@ class Http{
 
 	public function onRequest($request, $response){
 		$obj = new \Article();
+		$obj->index();
 		//$response->header('Content-type',"text/plain");
 		//$response->end("hello");
 	}
 
 	public function autoloader($class){
-		echo $class;
+		//echo $class;
+		$filepath = __DIR__.DIRECTORY_SEPARATOR.'Articel.php';
+		if(file_exists($filepath)){
+			require $filepath;
+		}
 	}
 
 	public function run(){
