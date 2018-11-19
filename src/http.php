@@ -1,5 +1,4 @@
 <?php 
-namespace app;
 class http{
 
     public $http;
