@@ -38,6 +38,7 @@ class http{
         $router = new router();
         $router::loader();
         //$class = "\\{$module}\\{$controller}";
+        $class = "\articel\articel";
         $obj = new $class();
         //$obj->$action();
 
