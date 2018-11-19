@@ -6,7 +6,7 @@
 //  $router = new app\router();
 
 
-echo ROOT."/src/http.php\r\n";
+
 require ROOT."/src/http.php";
 $http = new \http(9502);
 
