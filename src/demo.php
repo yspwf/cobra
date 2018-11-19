@@ -24,11 +24,11 @@ $server->on('request', function(swoole_http_request $request, swoole_http_respon
 
         $object = new $class_name();
 
-        // if( !method_exists($object, $method) )
-        // {
-        //     // 请求方法不存在, 抛出异常
-        //     throw new Exception("{$method} not found in {$controller}");
-        // }
+        if( !method_exists($object, $method) )
+        {
+            // 请求方法不存在, 抛出异常
+            throw new Exception("{$method} not found in {$controller}");
+        }
 
         // $result = $object->$method($request, $response);
 
@@ -55,11 +55,11 @@ function autoLoader($class)
     $baseClasspath = \str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
     // 如果文件存在, 引用文件
     $classpath = __DIR__ . DIRECTORY_SEPARATOR . $baseClasspath;
-    echo $classpath."\r\n";
-    // if (\is_file($classpath)) {
-    //     require "{$classpath}";
-    //     return;
-    // }
+    //echo $classpath."\r\n";
+    if (\is_file($classpath)) {
+        require "{$classpath}";
+        return;
+    }
 }
 // 注册自动加载函数
 spl_autoload_register('autoLoader');
