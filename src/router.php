@@ -22,7 +22,7 @@ class router{
     public static function loader(){
         spl_autoload_register(function($classname){
             $filename = ROOT."/".$classname.".php";
-            //$filename = str_replace("\\","/",$filename);
+            $filename = str_replace("\\","/",$filename);
             echo $filename."\r\n";
             if(!file_exists($filename)){
                 //header("HTTP/1.1 404 Not Found");
