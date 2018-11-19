@@ -20,7 +20,7 @@ class http{
 
     public function onWorkerStart(){
         //$this->app = 1;
-        //require ROOT."/src/router.php";
+        require ROOT."/src/router.php";
         //$this->router = new router();
     }
 
@@ -37,7 +37,9 @@ class http{
         $action = $urlArr['3'];
 
         try{
-            echo $module."----".$controller."-----".$action;
+           // echo $module."----".$controller."-----".$action;
+            $className = "\\{$mode}\\{$controller}";
+            echo $className;
         }catch(Exception $e){
             var_dump($e);
         }
