@@ -28,7 +28,7 @@ class Http{
 
 	public function autoloader($class){
 		//echo $class;
-		$filepath = __DIR__.DIRECTORY_SEPARATOR.'Articel.php';
+		$filepath = __DIR__.DIRECTORY_SEPARATOR.'Article.php';
 		if(file_exists($filepath)){
 			require $filepath;
 		}
