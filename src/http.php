@@ -26,7 +26,7 @@ class http{
 
     public function onRequest($request, $response){
 
-        //var_dump($request);
+        var_dump($request);
 
         //var_dump($request->server['request_uri']);
         $urlArr = explode('/',$request->server['path_info']);
@@ -70,7 +70,7 @@ class http{
         $baseClasspath = \str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
         // 如果文件存在, 引用文件
         $classpath = __DIR__ . DIRECTORY_SEPARATOR ."..". DIRECTORY_SEPARATOR . $baseClasspath;
-        //echo $classpath."\r\n";
+        echo $classpath."\r\n";
         if (\is_file($classpath)) {
             require "{$classpath}";
             return;
