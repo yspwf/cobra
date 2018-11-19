@@ -8,7 +8,7 @@
 
 
 require ROOT."/src/http.php";
-$http = new \http(9502);
+$http = new \Http();
 
 
 
