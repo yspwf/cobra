@@ -1,7 +1,5 @@
 <?php 
 
-$app = '';
-
 $server = new swoole_http_server('0.0.0.0', 9501);
 
 $server->on('start', function($server){
@@ -11,7 +9,10 @@ $server->on('start', function($server){
 $server->on('WorkerStart', function($server, $worker_id){
    
     // 注册自动加载函数
-    spl_autoload_register('autoLoader');
+    //spl_autoload_register('autoLoader');
+
+    require __DIR__.DIRECTORY_SEPARATOR.'router.php';
+
 });
 
 
