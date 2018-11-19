@@ -17,13 +17,14 @@ class router{
         // $class = "\\{$module}\\{$controller}";
         // $obj = new $class();
         // $obj->$action();
+
         spl_autoload_register('loader');
     }
    
 
     public static function loader($classname){
-
-        $baseClasspath = \str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
+        echo $classname;
+        $baseClasspath = \str_replace('\\', DIRECTORY_SEPARATOR, $classname) . '.php';
         // 如果文件存在, 引用文件
         $classpath = __DIR__ . DIRECTORY_SEPARATOR ."..". DIRECTORY_SEPARATOR . $baseClasspath;
         //echo $classpath."\r\n";
