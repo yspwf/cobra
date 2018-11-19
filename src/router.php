@@ -6,6 +6,7 @@ class router{
    
    
     public function __construct(){
+        echo "router \r\n";
         // $module = isset($_GET['m']) ? $_GET['m'] : 'index';
         // $controller = isset($_GET['c']) ? $_GET['c'] : 'index';
         // $action = isset($_GET['a']) ? $_GET['a'] : 'index';
