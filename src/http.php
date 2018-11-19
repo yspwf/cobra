@@ -25,13 +25,13 @@ class http{
 
         //var_dump($request);
 
-        //var_dump($request->server['request_uri']);
+        var_dump($request->server['request_uri']);
 
         //$app = $this->app;
         //$get = json_encode($request->get);
         //$response->end("app is ".$app.", get is ". $get);
-        $response->header('Content-Type','text/plain');
-        $response->end('hello swoole');
+        //$response->header('Content-Type','text/plain');
+        //$response->end('hello swoole');
     }
 
 }
