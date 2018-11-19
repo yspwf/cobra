@@ -15,7 +15,7 @@ class http{
     }
 
     public function onStart($server){
-        echo "this request is start";
+        echo "this request is start\r\n";
     }
 
     public function onWorkerStart(){
@@ -37,7 +37,7 @@ class http{
         //echo $module."--".$controller."--".$action;
         $router = new router();
         $router::loader();
-        $class = "\\{$module}\\{$controller}";
+        //$class = "\\{$module}\\{$controller}";
         $obj = new $class();
         //$obj->$action();
 
