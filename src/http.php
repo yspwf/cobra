@@ -20,7 +20,7 @@ class http{
 
     public function onWorkerStart(){
         //$this->app = 1;
-        require ROOT."/src/router.php";
+        //require ROOT."/src/router.php";
         //$this->router = new router();
     }
 
@@ -29,18 +29,25 @@ class http{
         //var_dump($request);
 
         //var_dump($request->server['request_uri']);
-        $urlArr = explode('/',$request->server['request_uri']);
-        array_shift($urlArr);
-        $module = $urlArr['0'];
-        $controller = $urlArr['1'];
-        $action = $urlArr['2'];
+        $urlArr = explode('/',$request->server['path_info']);
+        var_dump($urlArr);
+        // array_shift($urlArr);
+        // $module = $urlArr['0'];
+        // $controller = $urlArr['1'];
+        // $action = $urlArr['2'];
+
+        // require '../article/article.php';
+
+        // $article = new article();
+        // $article->index();
+
         //echo $module."--".$controller."--".$action;
-        $router = new router();
-        $router::loader();
+        //$router = new router();
+       // $router::loader();
         //$class = "\\{$module}\\{$controller}";
-        $class = "\articel\articel";
-        $obj = new $class();
-        $obj->$action();
+        //$class = "\articel\articel";
+        //$obj = new $class();
+        //$obj->$action();
 
         //$app = $this->app;
         //$get = json_encode($request->get);
