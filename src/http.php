@@ -4,6 +4,7 @@ class http{
 
     public $http;
     public $app;
+    public $router;
 
     public function __construct($port){
         $this->http = new \swoole_http_server('0.0.0.0', $port);
@@ -18,7 +19,9 @@ class http{
     }
 
     public function onWorkerStart(){
-        $this->app = 1;
+        //$this->app = 1;
+        require ROOT."/src/router.php";
+        //$this->router = new router();
     }
 
     public function onRequest($request, $response){
@@ -31,7 +34,12 @@ class http{
         $module = $urlArr['0'];
         $controller = $urlArr['1'];
         $action = $urlArr['2'];
-        echo $module."--".$controller."--".$action;
+        //echo $module."--".$controller."--".$action;
+        $router = new router();
+        $router::loader();
+        $class = "\\{$module}\\{$controller}";
+        $obj = new $class();
+        //$obj->$action();
 
         //$app = $this->app;
         //$get = json_encode($request->get);
