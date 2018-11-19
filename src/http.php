@@ -27,7 +27,7 @@ class http{
 
         //var_dump($request->server['request_uri']);
         $urlArr = explode('/',$request->server['request_uri']);
-        var_dump($urlArr);
+        var_dump(array_shift($urlArr));
 
         //$app = $this->app;
         //$get = json_encode($request->get);
