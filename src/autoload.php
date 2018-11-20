@@ -4,14 +4,18 @@
 
 function loader($classname){
     echo $classname;
-    $baseClasspath = \str_replace('\\', DIRECTORY_SEPARATOR, $classname) . '.php';
-    // 如果文件存在, 引用文件
-    $classpath = __DIR__ . DIRECTORY_SEPARATOR ."..". DIRECTORY_SEPARATOR . $baseClasspath;
-    //echo $classpath."\r\n";
-    if (\is_file($classpath)) {
-        require "{$classpath}";
-        return;
-    }
+        $filepath = __DIR__.DIRECTORY_SEPARATOR.'Article.php';
+		if(file_exists($filepath)){
+			require $filepath;
+		}
+    // $baseClasspath = \str_replace('\\', DIRECTORY_SEPARATOR, $classname) . '.php';
+    // // 如果文件存在, 引用文件
+    // $classpath = __DIR__ . DIRECTORY_SEPARATOR ."..". DIRECTORY_SEPARATOR . $baseClasspath;
+    // //echo $classpath."\r\n";
+    // if (\is_file($classpath)) {
+    //     require "{$classpath}";
+    //     return;
+    // }
 
         // $filename = ROOT."/".$classname.".php";
         // $filename = str_replace("\\","/",$filename);
