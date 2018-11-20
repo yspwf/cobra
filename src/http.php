@@ -23,8 +23,10 @@ class http{
 	}
 
 	public function onRequest($request, $response){
-		$obj = new \article\article();
-		$obj->index();
+		$url = new request();
+		$url->url($request, $response);
+		//$obj = new \article\article();
+		//$obj->index();
 		// $response->header('Content-type',"text/plain");
 		// $response->end("hello");
 	}
