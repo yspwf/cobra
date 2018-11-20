@@ -16,14 +16,16 @@ class Http{
 	}
 
 	public function onWorkerStart($server){
-		spl_autoload_register([$this, 'autoloader']);
+		$filepath = __DIR__.DIRECTORY_SEPARATOR.'autoload.php';
+		require $filepath;
+		//spl_autoload_register([$this, 'autoloader']);
 	}
 
 	public function onRequest($request, $response){
-		$obj = new \Article();
-		$obj->index($request, $response);
-		// $response->header('Content-type',"text/plain");
-		// $response->end("hello");
+		// $obj = new \Article();
+		// $obj->index($request, $response);
+		$response->header('Content-type',"text/plain");
+		$response->end("hello");
 	}
 
 	public function autoloader($class){
