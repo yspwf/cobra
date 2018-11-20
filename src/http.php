@@ -18,6 +18,7 @@ class http{
 	public function onWorkerStart($server){
 		$filepath = __DIR__.DIRECTORY_SEPARATOR.'autoload.php';
 		require $filepath;
+		spl_autoload_register('autoload::loader');
 		//spl_autoload_register([$this, 'autoloader']);
 	}
 

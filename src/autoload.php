@@ -1,6 +1,7 @@
 <?php 
+class autoload{
 
-function loader($classname){
+    public static function loader($classname){
         $basePath = \str_replace("\\", DIRECTORY_SEPARATOR,  $classname).".php";
         $filepath = ROOT.DIRECTORY_SEPARATOR.$basePath;
         echo $filepath."\r\n";
@@ -40,7 +41,12 @@ function loader($classname){
  
 }
 
-spl_autoload_register('loader');
+
+
+}
+
+
+
 
 
 
