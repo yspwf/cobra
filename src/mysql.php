@@ -37,7 +37,7 @@ class ConnectionPool{
     public function onReceive($server, $fd, $from_id, $data){
         $this->server->send($fd, "swoole data");
         $this->server->close($fd);
-        $this->task($data);
+        $this->server->task($data);
     }
 
     public function onClose($server, $fd){
@@ -67,6 +67,7 @@ class ConnectionPool{
         var_dump($data);
         echo "\r\n";
         sleep(10);
+        return "23421341234";
         //try{}catch(){}
     }
 
