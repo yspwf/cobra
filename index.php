@@ -4,11 +4,9 @@ require ROOT.'/vender/autoload.php';
 //  $params = require "/config/config.php";
 
 //  $router = new app\router();
-
-
-
 // require ROOT."/src/http.php";
- $http = new app\Http(9501);
+
+ $http = new app\http(9501);
  $http->run();
 
 

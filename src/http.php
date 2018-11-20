@@ -1,6 +1,6 @@
 <?php 
 namespace app;
-class Http{
+class http{
 
 	public $server = null;
 
