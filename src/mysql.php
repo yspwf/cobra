@@ -54,9 +54,9 @@ class ConnectionPool{
                     "root",
                     "123456",
                     array(
-                        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8';",
-                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                        PDO::ATTR_PERSISTENT => true
+                        \PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8';",
+                        \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
+                        \PDO::ATTR_PERSISTENT => true
                     )
                 );
             }catch(\PDOException $e){
