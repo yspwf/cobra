@@ -11,7 +11,7 @@ class db{
             $this->connection = new \PDO('mysql:host=127.0.0.1;dbname=demo;port=3306', 'root', '123456'); //初始化一个PDO对象
             $result = $this->connection->query('select 1+1');
            //你还可以进行一次搜索操作
-            foreach ($result as $row) {
+            foreach ($result->FetchAll() as $row) {
                 print_r($row); //你可以用 echo($GLOBAL); 来看到这些值
             }
           
