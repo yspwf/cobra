@@ -7,9 +7,6 @@ class request{
         echo "请求处理";
     }
 
-
-
-
 }
 
 ?>
