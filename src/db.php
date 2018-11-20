@@ -9,12 +9,12 @@ class db{
     public function __construct(){
         try {
             $this->connection = new \PDO('mysql:host=127.0.0.1;dbname=demo;port=3306', 'root', '123456'); //初始化一个PDO对象
-            echo "连接成功<br/>";
-            /*你还可以进行一次搜索操作
-            foreach ($dbh->query('SELECT * from FOO') as $row) {
+            $result = $this->connection->query('select 1+1');
+           //你还可以进行一次搜索操作
+            foreach ($result as $row) {
                 print_r($row); //你可以用 echo($GLOBAL); 来看到这些值
             }
-            */
+          
           
         } catch (PDOException $e) {
             die ("Error!: " . $e->getMessage() . "<br/>");
@@ -33,9 +33,9 @@ class db{
     //     return $conn;
     // }
 
-    public function query(){
-        return $this->connection->query('select 1+1');
-    }
+    // public function query(){
+    //     return $this->connection->query('select 1+1');
+    // }
 
 }
 
