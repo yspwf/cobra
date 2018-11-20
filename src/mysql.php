@@ -45,36 +45,42 @@ class ConnectionPool{
     }
 
     public function onWorkerStart($server, $worker_num){
-        echo "this is woker start \r\n";
+        //echo "this is woker start \r\n";
         //workerstart 事件在 worker 进程/task进程启动时发生，这里创建的对象可以在进程的生命周期内使用
-        // if($server->taskwoker){
-
-        //     $this->pdo = new \PDO(
-        //         "mysql:host=127.0.0.1;port=3306;dbname=demo",
-        //         "root",
-        //         "123456",
-        //         array(
-        //             PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8';",
-        //             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        //             PDO::ATTR_PERSISTENT => true
-        //         )
-        //     );
-        // }
+        if($server->taskwoker){
+            try{
+                $this->pdo = new \PDO(
+                    "mysql:host=127.0.0.1;port=3306;dbname=demo",
+                    "root",
+                    "123456",
+                    array(
+                        PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8';",
+                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                        PDO::ATTR_PERSISTENT => true
+                    )
+                );
+            }catch(\PDOException $e){
+                var_dump($e->getMessage());
+            }
+            
+        }
     }
 
 
     public function onTask($server, $task_id, $from_id, $data){
+
         var_dump($data);
-        echo "\r\n";
-        sleep(10);
-        return "23421341234";
+        // echo "\r\n";
+        // sleep(10);
+         return json_encode($data);
         //try{}catch(){}
     }
 
 
      public function onFinish($server, $taskId, $data){
-        echo "taskid  ".$taskId."\r\n";
-        echo ' finish-data-succ'.$data."\r\n";
+         var_dump(json_encode($data));
+        // echo "taskid  ".$taskId."\r\n";
+        // echo ' finish-data-succ'.$data."\r\n";
      }
 
 

@@ -1,7 +1,8 @@
 <?php
 $client = new swoole_client(SWOOLE_SOCK_TCP, SWOOLE_SOCK_ASYNC);
 $client->on("connect", function($cli) {
-    $cli->send("hello world\n");
+    $sql = "select 1+1";
+    $cli->send($sql);
 });
 $client->on("receive", function($cli, $data){
     echo "received: {$data}\n";
