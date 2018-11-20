@@ -3,6 +3,7 @@
 
 
 function loader($classname){
+    echo ROOT;
         $filepath = __DIR__.DIRECTORY_SEPARATOR.$classname.'.php';
 		if(file_exists($filepath)){
 			require $filepath;
