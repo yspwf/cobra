@@ -7,7 +7,7 @@ class ConnectionPool{
     public $pdo;
 
 
-    public function __construct($port){
+    public function __construct(){
         $this->server = new \swoole_server('127.0.0.1',9502);
         $this->server->set([
             'worker_num' => 4,
