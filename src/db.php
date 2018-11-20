@@ -15,11 +15,11 @@ class db{
         $user = 'root';
         $pwd = '123456';
         try{
-            return new \PDO($dsn, $user, $pwd);
+            $conn = new \PDO($dsn, $user, $pwd);
         }catch(PDOException $e){
             var_dump($e->getMessage());
         }
-       
+        return $conn;
     }
 
     public function query(){
