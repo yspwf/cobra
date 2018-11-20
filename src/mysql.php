@@ -47,7 +47,7 @@ class ConnectionPool{
     public function onWorkerStart($server, $worker_num){
         //echo "this is woker start \r\n";
         //workerstart 事件在 worker 进程/task进程启动时发生，这里创建的对象可以在进程的生命周期内使用
-        if($server->taskwoker){
+        if($worker_num >= $serv->setting['worker_num']){
             try{
                 $this->pdo = new \PDO(
                     "mysql:host=127.0.0.1;port=3306;dbname=demo",
