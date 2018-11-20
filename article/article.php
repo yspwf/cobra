@@ -12,7 +12,8 @@ class article{
         // $views->show();
         echo "\r\n";
         $db = new \app\db();
-        $db->query();
+        $result = $db->query();
+       var_dump($result);
         echo "\r\n";
         // echo "hello  article";
        

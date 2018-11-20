@@ -15,7 +15,7 @@ class db{
                 print_r($row); //你可以用 echo($GLOBAL); 来看到这些值
             }
             */
-            $dbh = null;
+          
         } catch (PDOException $e) {
             die ("Error!: " . $e->getMessage() . "<br/>");
         }
@@ -34,7 +34,7 @@ class db{
     // }
 
     public function query(){
-        var_dump($this->connection->query('select 1+1'));
+        return $this->connection->query('select 1+1');
     }
 
 }
