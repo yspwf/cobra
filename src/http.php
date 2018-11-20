@@ -20,10 +20,10 @@ class Http{
 	}
 
 	public function onRequest($request, $response){
-		$obj = new \Article();
-		$obj->index();
-		//$response->header('Content-type',"text/plain");
-		//$response->end("hello");
+		// $obj = new \Article();
+		// $obj->index($request, $response);
+		$response->header('Content-type',"text/plain");
+		$response->end("hello");
 	}
 
 	public function autoloader($class){
