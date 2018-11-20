@@ -70,6 +70,10 @@ class ConnectionPool{
     public function onTask($server, $task_id, $from_id, $data){
 
         var_dump($data);
+
+        $stmt = $this->pdo->query($data);
+        $result = $stmt->fetchAll();
+        var_dump($result);
         // echo "\r\n";
         // sleep(10);
          return json_encode($data);
