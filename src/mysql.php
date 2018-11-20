@@ -78,7 +78,7 @@ class ConnectionPool{
 
 
 }
-$mysql = new ConnectionPool()
+$mysql = new ConnectionPool();
 
 
 ?>
