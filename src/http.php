@@ -5,7 +5,7 @@ class http{
 	public $server = null;
 
 	public function __construct($port){
-		$this->server = new swoole_http_server('0.0.0.0', $port);
+		$this->server = new \swoole_http_server('0.0.0.0', $port);
 		$this->server->on('start', [$this, 'onStart']);
 		$this->server->on('WorkerStart', [$this, 'onWorkerStart']);
 		$this->server->on('request', [$this, 'onRequest']);
