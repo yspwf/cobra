@@ -28,13 +28,13 @@ class Http{
 		// $response->end("hello");
 	}
 
-	public function autoloader($class){
-		//echo $class;
-		$filepath = __DIR__.DIRECTORY_SEPARATOR.'Article.php';
-		if(file_exists($filepath)){
-			require $filepath;
-		}
-	}
+	// public function autoloader($class){
+	// 	//echo $class;
+	// 	$filepath = __DIR__.DIRECTORY_SEPARATOR.'Article.php';
+	// 	if(file_exists($filepath)){
+	// 		require $filepath;
+	// 	}
+	// }
 
 	public function run(){
 		$this->server->start();

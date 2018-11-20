@@ -3,8 +3,7 @@
 
 
 function loader($classname){
-    echo $classname;
-        $filepath = __DIR__.DIRECTORY_SEPARATOR.'Article.php';
+        $filepath = __DIR__.DIRECTORY_SEPARATOR.$classname.'.php';
 		if(file_exists($filepath)){
 			require $filepath;
 		}
