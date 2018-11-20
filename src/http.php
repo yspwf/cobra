@@ -1,5 +1,5 @@
 <?php 
-
+namespace app;
 class Http{
 
 	public $server = null;
