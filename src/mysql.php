@@ -8,7 +8,7 @@ class ConnectionPool{
 
 
     public function __construct($port){
-        $this->server = new \swoole_server('0.0.0.0',$port);
+        $this->server = new \swoole_server('127.0.0.1',9502);
         $this->server->set([
             'worker_num' => 4,
             'task_worker_num' => 4
