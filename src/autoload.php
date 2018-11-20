@@ -3,8 +3,9 @@
 
 
 function loader($classname){
-    echo ROOT;
-        $filepath = __DIR__.DIRECTORY_SEPARATOR.$classname.'.php';
+        $basePath = \str_replace("\\", DIRECTORY_SEPARATOR,  $classname).".php";
+        $filepath = ROOT.DIRECTORY_SEPARATOR.$basePath;
+        echo $filepath;
 		if(file_exists($filepath)){
 			require $filepath;
 		}
