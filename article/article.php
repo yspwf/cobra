@@ -11,7 +11,7 @@ class article{
         // $views = new views();
         // $views->show();
         echo "\r\n";
-        $db = new db();
+        $db = new \app\db();
         $db->query();
         echo "\r\n";
         // echo "hello  article";
