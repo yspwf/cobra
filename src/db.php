@@ -8,7 +8,7 @@ class db{
 
     public function __construct(){
         try {
-            $this->connection = new \PDO('mysql:host=localhost;dbname=demo;port=3306', $user, $pass); //初始化一个PDO对象
+            $this->connection = new \PDO('mysql:host=localhost;dbname=demo;port=3306', 'root', '123456'); //初始化一个PDO对象
             echo "连接成功<br/>";
             /*你还可以进行一次搜索操作
             foreach ($dbh->query('SELECT * from FOO') as $row) {
