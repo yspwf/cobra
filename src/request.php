@@ -9,6 +9,7 @@ class request{
 	public function __construct($request, $response){
 		$this->req = $request;
 		$this->res = $response;
+
 	}
 
     public function url(){
@@ -17,8 +18,6 @@ class request{
     }
 
     public function router(){
-
-    	new controller($this->req, $this->res);
     	
     	$uri = '';
 		$uri = $this->req->server['path_info'];
@@ -30,7 +29,7 @@ class request{
 		$action = empty($uri[2]) ? 'index' : $uri[2];
 
 		$class = "\\{$module}\\{$controller}";
-    	$obj = new $class();
+    	$obj = new $class($this->req, $this->res);
     	$obj->$action();
     }
 
