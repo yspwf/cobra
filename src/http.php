@@ -23,17 +23,10 @@ class http{
 	}
 
 	public function onRequest($request, $response){
-		$uri = '';
-		$uri = $request->server['path_info'];
-		//var_dump($uri);
-		$uri = explode("/", $uri);
-		array_shift($uri);
-		$module = empty($uri[0]) ? 'index' : $uri[0];
-		$controller = empty($uri[1]) ? 'index' : $uri[1];
-		$action = empty($uri[2]) ? 'index' : $uri[2];
+		
 		//list($module,$controller,$action) = $uri;
 		$req = new request();
-		$req->router($module,$controller,$action);
+		$req->router($request, $response);
 
 		//echo $module."----".$controller."-----".$action;
 

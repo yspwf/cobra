@@ -1,7 +1,8 @@
 <?php 
 namespace article;
+use \app\controller;
 
-class article{
+class article extends controller{
 
     public function index(){
 
@@ -12,6 +13,7 @@ class article{
     //     $result = $db->query();
     //    var_dump($result);
         //SSSecho "\r\n";
+        $this->render();
         echo "hello  article";
        
 
