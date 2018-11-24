@@ -25,8 +25,8 @@ class http{
 	public function onRequest($request, $response){
 		
 		//list($module,$controller,$action) = $uri;
-		$req = new request();
-		$req->router($request, $response);
+		$req = new request($request, $response);
+		$req->router();
 
 		//echo $module."----".$controller."-----".$action;
 

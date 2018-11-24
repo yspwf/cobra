@@ -3,12 +3,20 @@ namespace app;
 
 class request{
 
-    public function url($request, $response){
+	public $request;
+	public $response;
+
+	public function __construct($request, $response){
+		$this->request = $request;
+		$this->response = $response;
+	}
+
+    public function url(){
     	echo "数据库连接";
         $db = new db();
     }
 
-    public function router($request, $response){
+    public function router(){
 
     	$contro = new controller($request, $response);
     	
