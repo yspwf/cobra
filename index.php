@@ -6,7 +6,7 @@ require ROOT.'/vender/autoload.php';
 //  $router = new app\router();
 // require ROOT."/src/http.php";
 
- $http = new app\http(9501);
+ $http = new app\http(9051);
  $http->run();
 
 
