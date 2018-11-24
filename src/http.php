@@ -23,6 +23,7 @@ class http{
 	}
 
 	public function onRequest($request, $response){
+		$uri = '';
 		$uri = $request->server['path_info'];
 		//var_dump($uri);
 		$uri = explode("/", $uri);
