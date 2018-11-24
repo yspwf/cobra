@@ -23,8 +23,10 @@ class http{
 	}
 
 	public function onRequest($request, $response){
-		$uri = $request;
-		var_dump($uri);
+		$uri = $request->server['path_info'];
+		//var_dump($uri);
+		list($module,$controller,$action) = implode("/", $uri);
+		echo $module."----".$controller."-----".$action;
 
 		//$url = new request();
 		//$url->url($request, $response);
