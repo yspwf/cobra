@@ -8,6 +8,13 @@ class request{
         $db = new db();
     }
 
+    public function router($module='index', $controller='index', $action='index'){
+    	$obj = new $module\$controller();
+    	$obj->$action();
+    }
+
+
+
 }
 
 ?>

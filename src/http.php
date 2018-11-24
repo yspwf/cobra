@@ -28,8 +28,10 @@ class http{
 		$uri = explode("/", $uri);
 		array_shift($uri);
 		list($module,$controller,$action) = $uri;
+		$req = new request();
+		$req->router($module,$controller,$action);
 
-		echo $module."----".$controller."-----".$action;
+		//echo $module."----".$controller."-----".$action;
 
 		//$url = new request();
 		//$url->url($request, $response);
