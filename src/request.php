@@ -3,12 +3,12 @@ namespace app;
 
 class request{
 
-	public $request;
-	public $response;
+	public $req;
+	public $res;
 
 	public function __construct($request, $response){
-		$this->request = $request;
-		$this->response = $response;
+		$this->req = $request;
+		$this->res = $response;
 	}
 
     public function url(){
@@ -18,10 +18,10 @@ class request{
 
     public function router(){
 
-    	$contro = new controller($this->request, $this->response);
+    	new controller($this->req, $this->res);
     	
     	$uri = '';
-		$uri = $this->request->server['path_info'];
+		$uri = $this->req->server['path_info'];
 		//var_dump($uri);
 		$uri = explode("/", $uri);
 		array_shift($uri);
