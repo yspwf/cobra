@@ -14,9 +14,9 @@ class controller{
 
 
 	public function render(){
-		//$this->response->header('Content-type','text/html');
+		$this->response->header('Content-type','text/plain');
 
-		//$this->response->end("hello render");
+		$this->response->end("hello render");
 	}
 
 }
