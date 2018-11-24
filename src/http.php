@@ -24,7 +24,7 @@ class http{
 
 	public function onRequest($request, $response){
 		$uri = $request->server['path_info'];
-		//var_dump($uri);
+		var_dump($uri);
 		list($module,$controller,$action) = implode("/", $uri);
 		echo $module."----".$controller."-----".$action;
 
