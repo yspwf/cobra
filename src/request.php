@@ -18,10 +18,10 @@ class request{
 
     public function router(){
 
-    	$contro = new controller($request, $response);
+    	$contro = new controller($this->request, $this->response);
     	
     	$uri = '';
-		$uri = $request->server['path_info'];
+		$uri = $this->request->server['path_info'];
 		//var_dump($uri);
 		$uri = explode("/", $uri);
 		array_shift($uri);
