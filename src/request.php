@@ -9,7 +9,7 @@ class request{
     }
 
     public function router($module='index', $controller='index', $action='index'){
-    	$class = new "\\$module\\$controller";
+    	$class = new "\\{$module}\\{$controller}";
     	$obj = new $class();
     	$obj->$action();
     }
