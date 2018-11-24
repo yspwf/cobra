@@ -1,6 +1,6 @@
 <?php 
 namespace article;
-use \app\controller;
+use app\controller;
 
 class article extends controller{
 
