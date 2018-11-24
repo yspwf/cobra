@@ -6,8 +6,8 @@ class controller{
 	public $request = '';
 	public $response = '';
 
-	public function  __construct($request, $response){
-		var_dump($request);
+	public function  __construct(){
+		echo "controller";
 		//$this->request = $request;
 		//$this->response = $response;
 	}

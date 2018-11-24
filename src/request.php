@@ -9,6 +9,8 @@ class request{
     }
 
     public function router($request, $response){
+
+    	$contro = new controller($request, $response);
     	
     	$uri = '';
 		$uri = $request->server['path_info'];
@@ -18,8 +20,6 @@ class request{
 		$module = empty($uri[0]) ? 'index' : $uri[0];
 		$controller = empty($uri[1]) ? 'index' : $uri[1];
 		$action = empty($uri[2]) ? 'index' : $uri[2];
-
-		$contro = new controller($request, $response);
 
 		$class = "\\{$module}\\{$controller}";
     	$obj = new $class();
