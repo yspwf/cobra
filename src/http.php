@@ -23,7 +23,7 @@ class http{
 	}
 
 	public function onRequest($request, $response){
-		$uri = $request->path_info;
+		$uri = $request;
 		var_dump($uri);
 
 		//$url = new request();
