@@ -8,7 +8,7 @@ class Connection{
 
     public function __construct(){
         try {
-            $this->connection = new \PDO('mysql:host=127.0.0.1;dbname=demo;port=3306', 'root', '123456'); //初始化一个PDO对象
+            $this->connection = new \PDO('mysql:host=127.0.0.1;dbname=demo;port=3306', 'root', '123456',  array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8';",\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,\PDO::ATTR_PERSISTENT => true)); //初始化一个PDO对象
         //     $result = $this->connection->query('select 1+1');
         //    //你还可以进行一次搜索操作
         //    var_dump($result->FetchAll());
