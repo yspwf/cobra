@@ -23,8 +23,15 @@ class http{
 	}
 
 	public function onRequest($request, $response){
-		$url = new request();
-		$url->url($request, $response);
+		
+		//list($module,$controller,$action) = $uri;
+		$req = new request($request, $response);
+		$req->router();
+
+		//echo $module."----".$controller."-----".$action;
+
+		//$url = new request();
+		//$url->url($request, $response);
 		//$obj = new \article\article();
 		//$obj->index();
 		// $response->header('Content-type',"text/plain");
