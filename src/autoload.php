@@ -4,7 +4,7 @@ class autoload{
         public static function loader($classname){
             $basePath = \str_replace("\\", DIRECTORY_SEPARATOR,  $classname).".php";
             $filepath = ROOT.DIRECTORY_SEPARATOR.$basePath;
-            echo $filepath."\r\n";
+            //echo $filepath."\r\n";
             if(file_exists($filepath)){
                 require $filepath;
             }

@@ -18,7 +18,7 @@ class http{
 	public function onWorkerStart($server){
 		$filepath = __DIR__.DIRECTORY_SEPARATOR.'autoload.php';
 		require $filepath;
-		
+		require __DIR__.DIRECTORY_SEPARATOR.'mysql.php';
 		//spl_autoload_register([$this, 'autoloader']);
 	}
 
