@@ -32,7 +32,7 @@ class Connection{
     //     return $conn;
     // }
 
-    public static function query(){
+    public function query(){
         echo 'select 1+1';
         //return $this->connection->query('select 1+1');
     }
