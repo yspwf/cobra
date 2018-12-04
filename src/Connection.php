@@ -16,7 +16,7 @@ class Connection{
             //     print_r($row); //你可以用 echo($GLOBAL); 来看到这些值
             // }
           echo "mysql";
-          $this->query();
+          self::query();
         } catch (PDOException $e) {
             die ("Error!: " . $e->getMessage() . "<br/>");
         }
@@ -34,7 +34,7 @@ class Connection{
     //     return $conn;
     // }
 
-    public function query(){
+    public static function query(){
         echo 'select 1+1';
         //return $this->connection->query('select 1+1');
     }
