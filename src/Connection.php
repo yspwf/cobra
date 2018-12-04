@@ -16,7 +16,7 @@ class Connection{
             //     print_r($row); //你可以用 echo($GLOBAL); 来看到这些值
             // }
           
-          
+          $this->query();
         } catch (PDOException $e) {
             die ("Error!: " . $e->getMessage() . "<br/>");
         }
