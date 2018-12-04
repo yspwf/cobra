@@ -1,7 +1,7 @@
 <?php 
 namespace app;
 
-class db extends ConnectionPool{
+class db extends Connection{
 
     public function query(){
         echo "mysql   Model";

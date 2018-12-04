@@ -1,7 +1,7 @@
 <?php 
 namespace app;
 
-class db{
+class Connection{
 
     public $connection = null;
 
