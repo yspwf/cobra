@@ -1,7 +1,7 @@
 <?php 
 namespace app;
 
-class db extends Connection{
+class db{
 
     public function query(){
         // $result = $this->query();
