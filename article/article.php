@@ -13,8 +13,8 @@ class article extends controller{
     //     $result = $db->query();
     //    var_dump($result);
         //SSSecho "\r\n";
-        $this->render();
-        echo "hello  article";
+        $this->renderJson();
+        //echo "hello  article";
        
 
     }

@@ -25,7 +25,7 @@ class request{
         if($uri == '/favicon.ico'){
             return;
         }
-		var_dump($uri);
+		//var_dump($uri);
 		$uri = explode("/", $uri);
 		array_shift($uri);
 		$module = empty($uri[0]) ? 'index' : $uri[0];
