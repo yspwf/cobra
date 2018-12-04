@@ -1,10 +1,13 @@
 <?php 
 namespace article;
 use app\controller;
+use app\db;
 
 class article extends controller{
 
     public function index(){
+        $db = new db();
+        $db->query();
 
         // $views = new views();
         // $views->show();
