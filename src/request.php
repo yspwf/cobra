@@ -21,7 +21,10 @@ class request{
     public function router(){
     	
     	$uri = '';
-		$uri = $this->req->server['path_info'];
+        $uri = $this->req->server['path_info'];
+        if($uri == '/favicon.ico'){
+            return;
+        }
 		var_dump($uri);
 		$uri = explode("/", $uri);
 		array_shift($uri);
