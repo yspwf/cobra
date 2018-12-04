@@ -17,7 +17,7 @@ class controller{
 		//$this->response->header('Content-type','text/plain');
 		//$this->response->end("hello render");
 		$this->response->header('Content-type','text/html');
-		$this->end("html template");
+		$this->response->end("html template");
 	}
 
 	public function renderJson(){
@@ -26,7 +26,7 @@ class controller{
 			'info' => 'test info'
 		];
 		$this->response->header('Content-type','text/html');
-		$this->end(json_encode($arr));
+		$this->response->end(json_encode($arr));
 	}
 
 }
