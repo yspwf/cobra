@@ -39,7 +39,8 @@ class Connection{
     // }
 
     public function query(){
-        return $this->connection->query('select 1+1');
+        return 'select 1+1';
+        //return $this->connection->query('select 1+1');
     }
 
 }
