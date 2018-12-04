@@ -27,24 +27,7 @@ class http{
 		//list($module,$controller,$action) = $uri;
 		$req = new request($request, $response);
 		$req->router();
-
-		//echo $module."----".$controller."-----".$action;
-
-		//$url = new request();
-		//$url->url($request, $response);
-		//$obj = new \article\article();
-		//$obj->index();
-		// $response->header('Content-type',"text/plain");
-		// $response->end("hello");
 	}
-
-	// public function autoloader($class){
-	// 	//echo $class;
-	// 	$filepath = __DIR__.DIRECTORY_SEPARATOR.'Article.php';
-	// 	if(file_exists($filepath)){
-	// 		require $filepath;
-	// 	}
-	// }
 
 	public function run(){
 		$this->server->start();

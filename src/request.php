@@ -15,7 +15,7 @@ class request{
 
     public function url(){
     	echo "数据库连接";
-        $db = new db();
+        $db = new Connection();
     }
 
     public function router(){

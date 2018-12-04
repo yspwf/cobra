@@ -15,8 +15,6 @@ class Connection{
             // foreach ($result->FetchAll() as $row) {
             //     print_r($row); //你可以用 echo($GLOBAL); 来看到这些值
             // }
-          echo "mysql";
-          self::query();
         } catch (PDOException $e) {
             die ("Error!: " . $e->getMessage() . "<br/>");
         }

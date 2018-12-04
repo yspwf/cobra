@@ -6,10 +6,13 @@ class controller{
 	public $request = '';
 	public $response = '';
 
+	public $pdo;
+
 
 	public function __construct($request, $response){
 		$this->request = $request;
 		$this->response = $response;
+		$this->pdo = new \Connection();
 	}
 
 

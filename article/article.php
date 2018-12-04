@@ -6,8 +6,7 @@ use app\db;
 class article extends controller{
 
     public function index(){
-        $db = new db();
-        $db->query();
+        $this->pdo->query();
 
         // $views = new views();
         // $views->show();
