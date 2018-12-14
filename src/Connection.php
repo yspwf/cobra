@@ -41,9 +41,9 @@ class Connection{
 
     public function getConnect(){
         try{
-            $this->connection = new \PDO('mysql:host=127.0.0.1;dbname=demo;port=3306','root','123456');
-            $this->connection->query('set name utf8');
-            return $this->connection;
+            $this->connection = new \PDO('mysql:host=127.0.0.1;dbname=demo;port=3306', 'root', '123456',  array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8';",\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,\PDO::ATTR_PERSISTENT => true)); 
+            //$this->connection->query('set name utf8');
+            //return $this->connection;
         }catch(\PDOException $e){
             var_dump($e->getMessage());
         }
