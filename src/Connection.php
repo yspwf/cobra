@@ -32,14 +32,14 @@ class Connection{
     //     return $conn;
     // }
 
-    public function getInstance(){
+    public static function getInstance(){
         if(!self::$instance instanceof self){
             self::$instance = new self();
         }
         return self::$instance;
     }
 
-    public function getConnec(){
+    public function getConnect(){
         try{
             $this->connection = new \PDO('mysql:host=127.0.0.1;dbname=demo;port=3306','root','123456');
             $this->connection->query('set name utf8');
