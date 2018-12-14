@@ -4,8 +4,8 @@ namespace app;
 class Container{
 
     public function getObject($className){
-        echo $className;
-        $classObj = $className::getInstance();
+        echo $className.PHP_EOL;
+        $classObj = Connection::getInstance();
         $classObj->getConnect();
         return $classObj;
     }
