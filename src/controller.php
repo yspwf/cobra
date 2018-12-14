@@ -13,8 +13,8 @@ class controller{
 		$this->request = $request;
 		$this->response = $response;
 		//$this->pdo = new Connection();
-		$connect = Connection::getInstance();
-		$this->pdo = $connect->getConnect();
+		$this->pdo = Connection::getInstance();
+		//$this->pdo = $connect->getConnect();
 	}
 
 
