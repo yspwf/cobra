@@ -51,7 +51,8 @@ class Connection{
     }
 
     public function query(){
-       return $this->connection->query('select 1+1');
+        $result = $this->connection->query('select 1+1');
+        return $result->FetchAll();
     }
 
 }
