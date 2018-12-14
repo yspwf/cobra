@@ -13,7 +13,7 @@ class controller{
 		$this->request = $request;
 		$this->response = $response;
 		$data = new Container();
-		$this->pdo = $data->getObject('Connection');
+		$this->pdo = $data->getObject('mysql');
 		// $this->pdo = Connection::getInstance();
 		// $this->pdo->getConnect();
 	}

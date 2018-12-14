@@ -3,8 +3,8 @@ namespace app;
 
 class Container{
 
-    public function getObject($className){
-        switch($className){
+    public function getObject($type){
+        switch($type){
             case 'mysql':
                 $classObj = Connection::getInstance();
                 $classObj->getConnect();
