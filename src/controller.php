@@ -12,9 +12,10 @@ class controller{
 	public function __construct($request, $response){
 		$this->request = $request;
 		$this->response = $response;
-		//$this->pdo = new Connection();
-		$this->pdo = Connection::getInstance();
-		$this->pdo->getConnect();
+		$data = new Container();
+		$this->pdo = $data->getObject('Connection');
+		// $this->pdo = Connection::getInstance();
+		// $this->pdo->getConnect();
 	}
 
 
