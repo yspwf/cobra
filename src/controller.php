@@ -14,7 +14,7 @@ class controller{
 		$this->response = $response;
 		//$this->pdo = new Connection();
 		$connect = Connection::getInstance();
-		$this->pdo = $connect->getConnect();
+		//$this->pdo = $connect->getConnect();
 	}
 
 
